@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="./surveyFormStyle.css" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <main>
+      <header class="box">
+        <h1 id="title">Avatour</h1>
+        <p id="description">Life is a journey, Enjoy the ride.</p>
+      </header>
+
+      <form id="survey-form" class="container">
+        <h2>Thông tin </h2>
+        <div class="form-group">
+          <label id="name-label" for="name">Tên địa điểm</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Vd: Hà Giang, Sa Pa"
+            required
+          />
+          <!-- <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            class="form-control"
+            placeholder="Last"
+            required
+          /> -->
+        </div>
+        <div class="form-group">
+          <label id="name-label" for="name">Mô tả</label>
+          <input
+            type="text"
+            name="description"
+            id="description"
+            class="form-control"
+            placeholder="..."
+            required
+          />      
+        </div>
+        <div class="form-group">
+          <label id="image-label" for="file">Avatar:</label>
+          <input 
+          type="file"
+          name="filename"
+          id="myFile"
+          class="form-control"
+          placeholder="" 
+          required
+          />
+               
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number">Kinh độ (lat):</label>
+          <input
+            type="number"
+            name="lat"
+            id="lat"
+            class="form-control"
+            placeholder=""
+            required
+          />
+          
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number">Vĩ độ (lon):</label>
+          <input
+            type="number"
+            name="lng"
+            id="lng"
+            class="form-control"
+            placeholder=""
+            required
+          />
+          
+        </div>
+        <!-- <div class="form-group">
+          <label id="email-label" for="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+            class="form-control"
+            placeholder="Điền email của bạn"
+            required
+          />
+        </div> -->
+        <div class="form-group">
+          <p>Loại hình du lịch:</p>
+          <select id="dropdown" name="role" class="form-control" required>
+            <option value="">Lựa chọn</option>
+            <option value="restaurant">Nhà hàng</option>
+            <option value="homestay">Khách sạn (Homestay)</option>
+            <option value="picnic">Cắm trại</option>
+            <option value="volunteer">Tình nguyện</option>
+            <option value="teambuilding">Teambuilding</option>
+            <option value="visit">Du lịch tham quan</option>
+            <option value="green">Du lịch xanh</option>
+            <option value="holiday">Du lịch nghỉ dưỡng</option>
+            <option value="other">Khác</option>
+          </select>
+        </div>
+        <!-- <div class="form-group">
+          <p>Bạn đã từng đi du lịch chưa?</p>
+          <label>
+            <input
+              type="radio"
+              name="internationalFlight"
+              value="yes"
+              class="input-radio"
+            />
+            Rồi</label
+          >
+          <label>
+            <input
+              type="radio"
+              name="internationalFlight"
+              value="no"
+              class="input-radio"
+            />
+            Chưa</label
+          >
+        </div> -->
+
+        <div class="form-group">
+          <label id="number-label" for="number">Giá thấp nhất (VNĐ):</label>
+          <input
+            type="number"
+            name="lowestcost"
+            id="lowestcost"
+            class="form-control"
+            placeholder="Vd: 100000"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number">Giá cao nhất (VNĐ):</label>
+          <input
+            type="number"
+            name="highestcost"
+            id="highestcost"
+            class="form-control"
+            placeholder="Vd: 100000"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <p>Khoảng thời gian ở đây?</p>
+          <label>
+            <input
+              type="radio"
+              name="travel"
+              class="input-radio"
+              value="1-2 days"
+            />
+            1 - 2 ngày</label
+          >
+          <label>
+            <input
+              type="radio"
+              name="travel"
+              class="input-radio"
+              value="3-4 days"
+            />
+            3 - 4 ngày</label
+          >
+          <label>
+            <input
+              type="radio"
+              name="travel"
+              class="input-radio"
+              value="1 week"
+            />
+            1 tuần</label
+          >
+          <label>
+            <input
+              type="radio"
+              name="travel"
+              class="input-radio"
+              value="2 weeks"
+            />
+            2 tuần</label
+          >
+          <label>
+            <input
+              type="radio"
+              name="travel"
+              class="input-radio"
+              value="other"
+            />
+            Khác</label
+          >
+        </div>
+
+        <!-- <div class="form-group">
+          <p>Bạn thích đi tới những địa điểm nào?</p>
+          <label>
+            <input
+              type="checkbox"
+              name="prefer"
+              value="europe"
+              class="input-checkbox"
+            />
+            Hà Giang</label
+          >
+          <label>
+            <input
+              type="checkbox"
+              name="prefer"
+              value="north-america"
+              class="input-checkbox"
+            />
+            Sa Pa</label
+          >
+          <label>
+            <input
+              type="checkbox"
+              name="prefer"
+              value="south-america"
+              class="input-checkbox"
+            />
+            Tam Đảo</label
+          >
+          <label>
+            <input
+              type="checkbox"
+              name="prefer"
+              value="africa"
+              class="input-checkbox"
+            />
+            Nha Trang</label
+          >
+          <label>
+            <input
+              type="checkbox"
+              name="prefer"
+              value="asia"
+              class="input-checkbox"
+            />
+            Phú Quốc</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="prefer"
+              value="australia"
+              class="input-checkbox"
+            />
+            Khác</label
+          >
+        </div> -->
+
+        <!-- <div class="form-group">
+          <p>Bạn thích đi bằng phương tiện nào?</p>
+          <label>
+            <input
+              type="checkbox"
+              name="prefer"
+              value="bus"
+              class="input-checkbox"
+            />
+            Ô tô khách</label
+          >
+          <label>
+            <input
+              type="checkbox"
+              name="prefer"
+              value="motorbike"
+              class="input-checkbox"
+            />
+            Xe máy</label
+          >
+          <label>
+            <input
+              type="checkbox"
+              name="prefer"
+              value="plane"
+              class="input-checkbox"
+            />
+            Máy bay</label
+          >
+          <label>
+            <input
+              type="checkbox"
+              name="prefer"
+              value="train"
+              class="input-checkbox"
+            />
+            Tàu hỏa</label
+          >
+          <label>
+            <input
+              type="checkbox"
+              name="prefer"
+              value="ship"
+              class="input-checkbox"
+            />
+            Tàu thủy</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              name="prefer"
+              value="others"
+              class="input-checkbox"
+            />
+            Khác</label
+          >
+        </div> -->
+
+        <!-- <div class="form-group">
+          <p>Địa danh nào là nơi yêu thích của bạn?</p>
+          <textarea
+            id="country"
+            name="country"
+            class="input-textarea"
+            placeholder="Nơi yêu thích của mình là..."
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <p>Chuyến đi sắp tới của bạn là tới đâu?</p>
+          <textarea
+            id="favorite-country"
+            name="country"
+            class="input-textarea"
+            placeholder="Mình sắp tới..."
+          ></textarea>
+        </div> -->
+        <!-- <div class="form-group">
+          <p>Bạn còn có tâm sự, chia sẻ gì nữa không?</p>
+          <textarea
+            id="favorite-country"
+            name="country"
+            class="input-textarea"
+            placeholder="..."
+          ></textarea>
+        </div> -->
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Gửi
+          </button>
+        </div>
+      </form>
+      <footer>
+        
+        Avatour - Không phải lo lắng đi những đâu 
+        <a href="https://www.facebook.com/avatour.dattourcungnhau">
+        <img src="D:\SurveyForm-main\Logos-Facebook-icon.png", width="20">
+      </a>
+    </footer>
+      
+    </main>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga = function () {
+        ga.q.push(arguments);
+      };
+      ga.q = [];
+      ga.l = +new Date();
+      ga("create", "UA-XXXXX-Y", "auto");
+      ga("set", "anonymizeIp", true);
+      ga("set", "transport", "beacon");
+      ga("send", "pageview");
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+  </body>
+</html>
