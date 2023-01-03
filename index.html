@@ -362,6 +362,18 @@
           </button>
         </div>
       </form>
+
+      <script>
+        form.addEventListener("Gửi", function(e) {
+          e.preventDefault();
+          const data = new FormData(form);
+          for (const [name,value] of data) {
+          console.log(name, ":", value)
+        }
+      })
+
+      </script>
+      
       <footer>
         
         Avatour - Không phải lo lắng đi những đâu 
@@ -373,7 +385,7 @@
     </main>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-    <script>
+    <!-- <script>
       window.ga = function () {
         ga.q.push(arguments);
       };
@@ -384,6 +396,18 @@
       ga("set", "transport", "beacon");
       ga("send", "pageview");
     </script>
-    <script src="https://www.google-analytics.com/analytics.js" async></script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script> -->
+
+    <!-- Console log all the data submitted (TODO: support logging images) -->
+    <script>
+      const form = document.getElementById("survey-form");
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        for (const [name,value] of data) {
+          console.log(name, ":", value)
+        }
+      })
+    </script>
   </body>
 </html>
